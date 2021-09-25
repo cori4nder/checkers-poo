@@ -19,11 +19,34 @@ public class Jogo {
      * Utilizado na inicializa�ao do jogo.
      */
     private void criarPecas() {
-        Casa casa1 = tabuleiro.getCasa(0, 0);
-        Peca peca1 = new Peca(casa1, Peca.PEDRA_BRANCA);
+        Integer[] parX = {0, 2, 4, 6};
+        Integer[] imparX = {1, 3, 5, 7};
+        Integer[] whiteFileira = {5, 6, 7};
+        Integer[] darkFileira = {0, 1, 2};
+        
+        for (Integer y : whiteFileira) {
+        if (y % 2 == 0) {
+            for (Integer x: parX) {
+                new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_BRANCA);
+            }
+        } else {
+            for (Integer x: imparX) {
+                new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_BRANCA);
+            }
+        }
+        }
 
-        Casa casa2 = tabuleiro.getCasa(7, 7);
-        Peca peca2 = new Peca(casa2, Peca.DAMA_VERMELHA);
+        for (Integer y: darkFileira) {
+            if (y % 2 == 0) {
+                for (Integer x: parX) {
+                    new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_VERMELHA);
+                }
+            } else {
+                for (Integer x: imparX) {
+                    new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_VERMELHA);
+                }
+            }
+        }
     }
     
     /**
