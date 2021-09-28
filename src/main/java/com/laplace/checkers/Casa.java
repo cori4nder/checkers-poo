@@ -1,11 +1,8 @@
 package com.laplace.checkers;
-/**
- * Representa uma Casa do tabuleiro.
- * Possui uma posi�ao (i,j) e pode conter uma Pe�a.
- * 
- * @author Alan Moraes &lt;alan@ci.ufpb.br&gt;
- * @author Leonardo Villeth &lt;lvilleth@cc.ci.ufpb.br&gt;
- */
+
+// Representa uma Casa do tabuleiro.
+// Possui uma posição (i,j) e pode conter uma Peça.
+
 public class Casa {
 
     private int x;

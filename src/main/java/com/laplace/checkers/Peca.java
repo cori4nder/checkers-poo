@@ -1,11 +1,7 @@
 package com.laplace.checkers;
-/**
- * Representa uma Pe�a do jogo.
- * Possui uma casa e um tipo associado.
- * 
- * @author Alan Moraes &lt;alan@ci.ufpb.br&gt;
- * @author Leonardo Villeth &lt;lvilleth@cc.ci.ufpb.br&gt;
- */
+
+// Representa uma peça no jogo. Possui uma casa e um tipo associada
+
 public class Peca {
 
     public static final int PEDRA_BRANCA = 0;

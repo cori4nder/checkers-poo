@@ -9,12 +9,8 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-/**
- * Interface Grafica de uma Casa no tabuleiro do jogo.
- *
- * @author Alan Moraes &lt;alan@ci.ufpb.br&gt;
- * @author Leonardo Villeth &lt;lvilleth@cc.ci.ufpb.br&gt;
- */
+// Interface Gráfica do Tabuleiro
+
 public class CasaGUI extends JButton {
 
     // Constantes 
@@ -22,13 +18,13 @@ public class CasaGUI extends JButton {
     public static final Color COR_ESCURA = new Color(65, 41, 1);
     private static final Color COR_DESTAQUE = new Color(0, 1, 0, 0.4f);
     
-    // Icones das pecas
+    // Icones das peças
     private static final Icon PEDRA_BRANCA = new ImageIcon("assets/whitepiece.png");
     private static final Icon DAMA_BRANCA = new ImageIcon("assets/whitelady.png");
     private static final Icon PEDRA_VERMELHA = new ImageIcon("assets/darkpiece.png");
     private static final Icon DAMA_VERMELHA = new ImageIcon("assets/darklady.png");
     
-    // Cores das pecas
+    // Cores das peças
     public static final int SEM_PECA = -1;
     public static final int PECA_BRANCA = 0;
     public static final int PECA_VERMELHA = 1;
@@ -112,9 +108,8 @@ public class CasaGUI extends JButton {
         setBackground(cor);
     }
 
-    /**
-     * Pinta o componente com a cor de fundo, aceita valores RGBA
-     */
+// Pinta componente com a cor do fundo - RGBA
+
     @Override
     protected void paintComponent(Graphics g) {
         g.setColor(getBackground());

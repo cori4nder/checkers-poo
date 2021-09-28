@@ -3,12 +3,8 @@ package com.laplace.checkers;
 import java.awt.Color;
 import javax.swing.JPanel;
 
-/**
- * Interface Grafica do Tabuleiro do jogo.
- * 
- * @author Alan Moraes &lt;alan@ci.ufpb.br&gt;
- * @author Leonardo Villeth &lt;lvilleth@cc.ci.ufpb.br&gt;
- */
+// Interface gráfica
+
 public class TabuleiroGUI extends JPanel {
 
     private JanelaPrincipal janela;

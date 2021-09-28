@@ -1,10 +1,5 @@
 package com.laplace.checkers;
-/**
- * Armazena o tabuleiro e responsavel por posicionar as pecas.
- * 
- * @author Alan Moraes &lt;alan@ci.ufpb.br&gt;
- * @author Leonardo Villeth &lt;lvilleth@cc.ci.ufpb.br&gt;
- */
+
 public class Jogo {
 
     private Tabuleiro tabuleiro;
@@ -14,10 +9,8 @@ public class Jogo {
         criarPecas();
     }
     
-    /**
-     * Posiciona pe�as no tabuleiro.
-     * Utilizado na inicializa�ao do jogo.
-     */
+//  Posiciona as peças no tabuleiro
+
     private void criarPecas() {
         Integer[] parX = {0, 2, 4, 6};
         Integer[] imparX = {1, 3, 5, 7};
@@ -27,11 +20,11 @@ public class Jogo {
         for (Integer y : whiteFileira) {
         if (y % 2 == 0) {
             for (Integer x: parX) {
-                new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_BRANCA);
+                new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_VERMELHA);
             }
         } else {
             for (Integer x: imparX) {
-                new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_BRANCA);
+                new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_VERMELHA);
             }
         }
         }
@@ -39,11 +32,11 @@ public class Jogo {
         for (Integer y: darkFileira) {
             if (y % 2 == 0) {
                 for (Integer x: parX) {
-                    new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_VERMELHA);
+                    new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_BRANCA);
                 }
             } else {
                 for (Integer x: imparX) {
-                    new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_VERMELHA);
+                    new Peca(this.tabuleiro.getCasa(x, y), Peca.PEDRA_BRANCA);
                 }
             }
         }

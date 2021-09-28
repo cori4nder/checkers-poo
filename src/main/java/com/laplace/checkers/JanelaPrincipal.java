@@ -5,13 +5,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-/**
- * Tela do jogo.
- * Respons�vel por reagir aos cliques feitos pelo jogador.
- * 
- * @author Alan Moraes &lt;alan@ci.ufpb.br&gt;
- * @author Leonardo Villeth &lt;lvilleth@cc.ci.ufpb.br&gt;
- */
+// Tela - Reage aos cliques
+
 public class JanelaPrincipal extends JFrame {
 
     private Jogo jogo;
@@ -19,11 +14,8 @@ public class JanelaPrincipal extends JFrame {
     private CasaGUI casaClicadaOrigem;
     private CasaGUI casaClicadaDestino;
     
-    /**
-     * Responde aos cliques realizados no tabuleiro.
-     * 
-     * @param casaClicada Casa que o jogador clicou.
-     */
+// Responde aos cliques no tabuleiro
+
     public void reagir(CasaGUI casaClicada) {
         if (primeiroClique) {
             if (casaClicada.possuiPeca()) {
@@ -46,10 +38,8 @@ public class JanelaPrincipal extends JFrame {
         }
     }
     
+//  Contructor da classe
 
-    /**
-     * Construtor da classe.
-     */
     public JanelaPrincipal() {
         initComponents();
 
@@ -77,12 +67,9 @@ public class JanelaPrincipal extends JFrame {
         super.setVisible(true);
         super.pack();
     }
-
     
+// Cria um novo jogo e atualiza o tabuleiro gráfico 
 
-    /**
-     * Cria um novo jogo e atualiza o tabuleiro gr�fico.
-     */
     private void criarNovoJogo() {
         if(!primeiroClique) {
             primeiroClique = true;
@@ -216,7 +203,7 @@ public class JanelaPrincipal extends JFrame {
         lbl_h.setText("H");
         pnlColunas.add(lbl_h);
 
-        menuArquivo.setText("Jogo");
+        menuArquivo.setText("Chekers - Projeto LP I");
 
         menuNovo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
         menuNovo.setText("Novo");
